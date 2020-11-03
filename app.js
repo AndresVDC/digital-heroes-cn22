@@ -1,6 +1,3 @@
-
-
-
 // PASO 1: Crear una constante llamada express y requerir el modulo express
 let express= require('express')
 // PASO 2: Ejecución de Express
@@ -10,6 +7,7 @@ let app= express()
 // Crea una variable (por ej. heroes) y asignale como valor el contenido del archivo "heroes.json"
 // Tip: podes usar el require como si fuera un modulo ;)
 let heroes= require('./heroes.json')
+
 
 // PASO 4: Configurando el servidor
 // Crea una constante llamada PORT y asignale como valor el numero tres mil
@@ -31,12 +29,14 @@ app.get('/heroes', (req,res) => {
   res.send(heroes);
 });
 
+
 // CONSIGNA 3
 // Aqui creas la ruta para devolver la pagina de los creditos
 // Podes resolverlo en base a los ejemplos anteriores.
 app.get('/creditos', (req,res) => {
   res.send('Andrés Domínguez:Without faith, there is no force of will.');
 });
+
 
 // Ruta... ¿Pára qué sirve esto?
 app.get('*', (req, res) => {
